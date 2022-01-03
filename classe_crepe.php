@@ -7,14 +7,14 @@ class Crêpe {
     public $farine;
     private $topping; // ici c'est un attribut privé
 
-    // ci dessous le constructeur qui est la fonction permettant de créer l'objet, elle a comme paramètres les variables créées ci dessus. IL Y A TOUJOURS DEUX UNDERSCORE SUR LA FONCTION CONSTRUCT
+    // ci dessous le constructeur qui est la fonction permettant de créer l'objet.. IL Y A TOUJOURS DEUX UNDERSCORE SUR LA FONCTION CONSTRUCT!!!
     public function __construct(
-        $oeuf, // on aurait pu aussi mettre aliment 1 ici 
+        $oeuf, // on aurait pu aussi mettre aliment 1 ici en tant que nom de paramètres
         $beurre,
         $farine,
         $topping,
     ) {
-        $this->oeuf = $oeuf; // donc on aurait mis ici $this->oeuf = $aliment1
+        $this->oeuf = $oeuf; // donc on aurait mis $this->oeuf = $aliment1 si jamais on avait nommé le premier paramètre d'entrée aliment1
         $this->beurre = $beurre;
         $this->farine = $farine;
         $this->topping = $topping;
@@ -28,16 +28,18 @@ class Crêpe {
         
 
     }
-    // la donnée topping étant privée, on créer une fonction qui permet de l'afficher, mais pas forcément de la modifier ou autre. Par exemple dans un jeux vidéo l'utilisateur a le droit de voir ses points de vie mais pas de les modifier etc... 
+    // la donnée topping étant privée, on créer une méthode qui permet de l'afficher, mais pas forcément de la modifier ou autre. Par exemple dans un jeux vidéo l'utilisateur a le droit de voir ses points de vie mais pas de les modifier etc... 
     public function getTopping () {
         return $this->topping;
     }
 
+    // Méthode pour modifier l'attribut topping 
     public function setTopping ($parametre) {
         $this->topping = $parametre;
        
     }
 
+    //  Méthode pour ajouter une donnée dans l'attribut topping dans le cas ou il serait un tableau. 
     public function addTopping ($nouveauTopping) {
         array_push($this->topping,"$nouveauTopping");
     }
