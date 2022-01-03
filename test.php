@@ -1,6 +1,6 @@
 <?php
     require './classe_crepe.php';
-    $crepeauchocolat = new Crêpe (2,3,5,["chocolat"]); // ici on ne connait pas encore le topping donc on l'initialise en array puisque le topping constituera plusieurs éléments.
+    $crepeauchocolat = new Crêpe (2,3,5,["chocolat"]); // ici on ne connait pas encore le topping donc on l'initialise en array puisque le topping constituera plusieurs éléments. edit: on a décidé ensuite de rentrer une valeur dans l'array.
     var_dump($crepeauchocolat);
     echo $crepeauchocolat-> description_crepe();
 
@@ -11,9 +11,14 @@
     // $crepeauchocolat -> setTopping ("vanille");
     // echo  "\n". $crepeauchocolat -> getTopping();
 
-    $crepeauchocolat -> addTopping("Vanille");
+    // Utilisation de la fonction addTopping pour ajouter deux valeurs à l'attribut Topping
+    $crepeauchocolat -> addTopping("Vanille","Fraise");
     var_dump($crepeauchocolat->getTopping());
 
-    // 
+    $crepeauchocolat -> removeElement("Vanille");
+
+    var_dump($crepeauchocolat);
+
+    
 
     

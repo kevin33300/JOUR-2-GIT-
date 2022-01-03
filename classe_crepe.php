@@ -20,6 +20,7 @@ class Crêpe {
         $this->topping = $topping;
     }
 
+    // Ci dessous une méthode permettant de décrire l'objet que l'on vient de créer. 
     public function description_crepe () {
         echo "Il s'agit d'une crêpe avec : \n";
         echo $this->oeuf. " oeufs. \n";
@@ -39,8 +40,12 @@ class Crêpe {
        
     }
 
-    //  Méthode pour ajouter une donnée dans l'attribut topping dans le cas ou il serait un tableau. 
-    public function addTopping ($nouveauTopping) {
-        array_push($this->topping,"$nouveauTopping");
+    //  Méthode pour ajouter des données à l'attribut topping dans le cas ou il serait un tableau. 
+    public function addTopping ($nouveauTopping1,$nouveauTopping2) {
+    array_push($this->topping,$nouveauTopping1,$nouveauTopping2);
+    }
+
+    public function removeElement($element) {
+        unset($this->topping[array_search($element,$this->topping)]);
     }
 }
