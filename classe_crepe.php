@@ -37,4 +37,8 @@ class Crêpe {
         $this->topping = $parametre;
        
     }
+
+    public function addTopping ($nouveauTopping) {
+        array_push($this->topping,"$nouveauTopping");
+    }
 }
