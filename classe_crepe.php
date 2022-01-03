@@ -6,7 +6,7 @@ class Crêpe {
     public $beurre;
     public $farine;
     private $topping; // ici c'est un attribut privé
-    
+
     // ci dessous le constructeur qui est la fonction permettant de créer l'objet, elle a comme paramètres les variables créées ci dessus. IL Y A TOUJOURS DEUX UNDERSCORE SUR LA FONCTION CONSTRUCT
     public function __construct(
         $oeuf, // on aurait pu aussi mettre aliment 1 ici 
@@ -25,7 +25,11 @@ class Crêpe {
         echo $this->oeuf. " oeufs. \n";
         echo $this->beurre. " beurre. \n";
         echo $this->farine. " farine. \n";
-        echo $this->topping. " topping. \n";
+        
 
+    }
+
+    public function getTopping () {
+        return $this->topping;
     }
 }
