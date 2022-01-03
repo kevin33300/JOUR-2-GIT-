@@ -28,8 +28,13 @@ class Crêpe {
         
 
     }
-
+    // la donnée topping étant privée, on créer une fonction qui permet de l'afficher, mais pas forcément de la modifier ou autre. Par exemple dans un jeux vidéo l'utilisateur a le droit de voir ses points de vie mais pas de les modifier etc... 
     public function getTopping () {
         return $this->topping;
+    }
+
+    public function setTopping ($parametre) {
+        $this->topping = $parametre;
+       
     }
 }
